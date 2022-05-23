@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+body{
+    background-color: #069A8E;
+}
+
+h1{
+    font-family: 'Koulen', cursive;font-family: 'Koulen', cursive;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+
+table{
+    margin: auto;
+    margin-top: 30px;
+    border-spacing: 20px;
+}
+img{
+    border-radius: 20px;
+}
