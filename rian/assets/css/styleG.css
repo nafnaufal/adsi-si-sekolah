@@ -18,4 +18,10 @@ table{
 }
 img{
     border-radius: 20px;
+    width: 256px;
+    height: 256px;
+}
+
+img:hover{
+    cursor: pointer;
 }
