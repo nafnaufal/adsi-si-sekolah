@@ -8,8 +8,7 @@
     $data = mysqli_fetch_assoc($query);
     if(mysqli_num_rows($query)){
         if(password_verify($pas, $data['password'])){
-            echo "Berhasil Login";
-            header("Refresh:1; url=../guru.php", true, 303);
+            header("Refresh:0; url=../data_nilai/guru.php", true, 303);
         }else{
             echo "Password Salah";
             header("Refresh:1; url=./login.html", true, 303);

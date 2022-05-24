@@ -5,7 +5,7 @@
     $con = mysqli_connect("localhost","root","","sekolah");
     $siswa = "SELECT * FROM siswa WHERE nisn = '$nisn'";
 
-    $nilai = "SELECT * FROM nilai WHERE nisn = '$nisn'";
+    $nilai = "SELECT * FROM nilai WHERE nisn = '$nisn' ORDER BY semester";
     
     $hasilS = mysqli_query($con,$siswa);
     $dataS = mysqli_fetch_array($hasilS);
@@ -25,6 +25,9 @@
     </head>
     
     <body>
+        <div class="container text-center">
+            <h1>Detail <?= $dataS["nama"] ?></h1>
+        </div>
         <div class="container">
             <table class = "table table-striped mt-5">
                 <tr>
