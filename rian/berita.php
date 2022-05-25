@@ -1,21 +1,18 @@
 <?php
 $koneksi = mysqli_connect("localhost", "root", "rian", "sekolah");
-$sql = "SELECT * FROM berita";
+$sql = "SELECT * FROM berita ORDER BY (id_berita) DESC";
 $exe = mysqli_query($koneksi, $sql);
 ?>
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Berita</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
   <h1>Berita MTs 1 Pontianak</h1>
-
   <table>
     <tr>
       <?php $i = 0;
@@ -27,7 +24,7 @@ $exe = mysqli_query($koneksi, $sql);
             <div class="container">
               <h4><b><?php echo $row['title'] ?></b></h4>
               <p><?php echo $row['sinop'] ?></p>
-              <a href="detail_berita.html?id=<?php echo $row['id_berita'] ?>">Selengkapnya..</a>
+              <a href="detail_berita.php?id=<?php echo $row['id_berita'] ?>">Selengkapnya..</a>
             </div>
           </div>
         </td>
@@ -37,5 +34,4 @@ $exe = mysqli_query($koneksi, $sql);
 <?php } ?>
   </table>
 </body>
-
 </html>
