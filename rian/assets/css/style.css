@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 
-
+*{
+    margin: 0;
+    box-sizing: 0;
+}
 body {
     background-color: #069A8E;
 }
