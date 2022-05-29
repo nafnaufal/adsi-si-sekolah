@@ -14,10 +14,4 @@
             Koneksi::$connection = NULL;
         }
     }
-
-    if(Koneksi::getConnection()){
-        echo "koneksi berhasil";
-    }else{
-        echo "Koneksi gagal";
-    }
 ?>
