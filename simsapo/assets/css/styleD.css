@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: 0;
+}
+body{
+    font: 'Segoe UI';
+    background-color: #ffffff;
+    text-align: center;
+    color: white;
+}
+
+img{
+    margin: auto;
+    width: 600px;
+    margin-top: 20px;
+    height: 300px;
+    border-radius: 10px;
+}
+h3{
+    font-family: 'Koulen', cursive;
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 30px;
+}
+.isi{
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    text-align: left;
+}
