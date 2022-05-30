@@ -18,6 +18,20 @@
                 }
             }
 
+            function role_changed(){
+                var role = document.getElementById("jenis-role").value;
+
+                if(role == "siswa"){
+                    document.getElementById("tgl-contain").style.display = "block";
+                    document.getElementById("alamat-contain").style.display = "block";
+                    document.getElementById("kelas-contain").style.display = "block";
+                }else{
+                    document.getElementById("tgl-contain").style.display = "none";
+                    document.getElementById("alamat-contain").style.display = "none";
+                    document.getElementById("kelas-contain").style.display = "none";
+                }
+            }
+
             function load_kelas(){
                 var xmlhttp = new XMLHttpRequest();
                 xmlhttp.onreadystatechange = function() {
@@ -83,7 +97,7 @@
                     <form action="./script/save-user.php" method="get">
                         <div class="mb-3">
                             <label for="jenis-role" class="form-label">Role</label>
-                            <select name="jenis-role" id="jenis-role" class="form-select">
+                            <select name="jenis-role" id="jenis-role" class="form-select" onchange="role_changed()">
                                 <option value="siswa">Siswa</option>
                                 <option value="guru">Guru</option>
                             </select>
@@ -96,15 +110,15 @@
                             <label for="nama" class="form-label">Nama</label>
                             <input type="text" class="form-control" id="nama" name="nama">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3" id="tgl-contain">
                             <label for="tanggal-lahir" class="form-label">Tanggal Lahir</label>
                             <input type="date" class="form-control" id="tanggal-lahir" name="tanggal-lahir">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3" id="alamat-contain">
                             <label for="alamat" class="form-label">Alamat</label>
                             <input type="text" class="form-control" id="alamat" name="alamat">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3" id="kelas-contain">
                             <label for="kode-kelas" class="form-label">Kelas</label>
                             <select name="kode-kelas" id="kode-kelas" class="form-select" onchange="kelas_changed()"></select>
                             <input class="form-control mt-2" type="text" name="kelas-other" id="kelas-other" placeholder="Kelas" style="display: none">
